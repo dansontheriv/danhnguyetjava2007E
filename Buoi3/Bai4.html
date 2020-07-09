@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-color: bisque;
+        font-family:Arial, Helvetica, sans-serif;
+        color: lemonchiffon;
+    }
+    .menu{
+        text-align: center;
+        list-style-type: none;
+    }
+    .menu li{
+        background-color: brown;
+        border: 2px solid black;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        display: inline-block;
+        margin-left: -5px;
+        line-height: 40px;
+        position: relative;
+    }
+
+    .menu li:hover{
+        background-color: palevioletred;
+    }
+
+    .sub-menu{
+        display: none;
+        position: absolute;
+    }
+
+    .sub-menu li{
+        margin-left: -42px;
+    }
+
+    .menu li:hover .sub-menu{
+        display: block;
+    }
+
+    .watch{
+        display: none;
+        position: absolute;
+    }
+
+    .watch li{
+        margin-left: -22px;
+        top: -2px;
+    }
+
+    .sub-menu li:hover .watch{
+        display: inline-block;
+    }
+
+</style>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>Trang chủ</li>
+            <li>Quần áo nữ</li>
+            <li>Quần áo nam
+                <ul class="sub-menu">
+                    <li>Áo cộc tay</li>
+                    <li>Quần Jean</li>
+                    <li>Đồng hồ đeo tay
+                        <ul class="watch">
+                            <li>Đồng hồ Casio</li>
+                            <li>Đồng hồ Rolex</li>
+                            <li>Đồng hồ Hàng mã</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Quần áo trẻ em</li>
+        </ul>
+    </div>
+</body>
+</html>

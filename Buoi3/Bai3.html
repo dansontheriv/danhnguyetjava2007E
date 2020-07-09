@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style type="text/css">
+    .container{
+        border: 2px solid black;
+        width: 100%;
+        height: 1500px;
+        position: relative;
+    }
+
+    .menu{
+        position: fixed;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .menu p{
+        border: 1px solid black;
+        background-color: coral;
+        width: 120px;
+        height: 20px;
+        display: inline-block;
+        z-index: -20;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .text{
+        z-index: -20;
+        position: relative;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .img1{
+        z-index: -30;
+        position: absolute;
+        left: 5px;
+        top: 10px;
+       
+    }
+
+    /* .img2{
+        z-index: -30;
+        position: absolute;
+        right: 5px;
+        top: 30px;
+      
+    }
+
+    .img3{
+        z-index: -10;
+        position: absolute;
+        bottom: 0px;
+        left: 5px;
+        
+    } */
+
+    .footer{
+        text-align: center;
+        background-color: darkseagreen;
+        position: fixed;
+        bottom: 0px;
+        width: 80%;
+        left: 130px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <p>Menu number 1</p>
+            <p>Menu number 2</p>
+            <p>Menu number 3</p>
+            <p>Menu number 4</p>
+            <p>Menu number 5</p>
+        </div>
+        <div class="text">
+            <h3>This is my story</h3>
+            <p>Truyện kể rằng cách đây hàng triệu năm, khi Sahara vẫn còn là những khu rừng xanh tốt, 
+                cây cối um tùm đến mức từ trên cao bạn phải cực kỳ cố gắng mới có thể len lỏi xuống phía 
+                dưới mặt đất để lắng nghe cuộc trò chuyện giữa một đám cây con.</p>
+            <p>“Thật là tuyệt vời! Thiên nhiên đã quá ưu đãi chúng ta!” – Một cây lên tiếng. 
+                “Đúng vậy, hàng ngày tớ có thể cảm nhận được dòng nước ngầm mát lành chảy qua rễ của mình”, một cây khác hào hứng nói.</p>
+            <p>“Đơn giản chỉ là hút và tận hưởng”, một cây béo ú cất giọng thỏa mãn. “Ừ đúng rồi, tớ cũng vậy… 
+                cả tớ nữa… nhiều nước thế này dùng cả đời không hết.. ” – Rất nhiều cây hùa theo.</p>
+            <p>Trong khi đó, một cây sồi bé nhỏ nhất đám im lặng. Có thể bạn cho rằng sự tự tin tỉ lệ với vóc dáng tí hon ấy. 
+                Nhưng đừng nhầm nhé, sồi con đang ngẫm nghĩ. Và nó cất tiếng, giọng nói không to nhưng rõ tròn từng từ một.</p>
+            <p>“Tớ thì không nghĩ vậy, ông tớ bảo rồi quy luật cuộc sống là không có cái gì tồn tại mãi, nên rồi sẽ có ngày nguồn nước cạn kiệt.”
+                 – Sồi con quả quyết – “Nếu chỉ biết tận hưởng mà không cố gắng phát triển rễ mạnh mẽ thì chúng ta sẽ tuyệt chủng!”</p>
+            <p>“Tuyệt chủng ư?? Tớ có nghe lầm không đấy. Ha ha ha…” – cây béo ú lúc nãy cười thông cảm, “Thôi đi ông cụ non, đừng có dọa bọn này.
+                 Bố tớ bảo nguồn nước tinh khiết này đã nuôi dưỡng khu rừng này hàng ngàn năm rồi đấy! Không đời nào có chuyện đó đâu!”.</p>
+            <p>“Đúng rồi, đúng rồi!” Cả đám cây tán đồng.</p>
+            <p>“Nhưng…” sồi con không còn biết nói gì nữa. Nó lủi thủi ngẫm nghĩ một mình, mặc kệ lũ bạn đang cười đùa bàn tán ầm ĩ. 
+                Nó phát hiện ra rễ mình vẫn còn yếu và ngắn quá!</p>
+            <p>Thế là từ hôm đó, trong khi bạn bè tập trung phát triển thân cành lá thật to, thật khỏe, thật xanh để vươn cao đón ánh mặt trời, 
+                để khoe sức mạnh, khoe hình thể thì sồi con dùng phần lớn chất dinh dưỡng để chăm sóc phát triển bộ rễ để vươn xa và sâu hơn.</p>
+            <p>Mỗi lần rễ sồi tiến được một đoạn và tìm ra nhánh nước ngầm mới, cảm giác chiến thắng nho nhỏ mơn man, sồi con rất vui. 
+                Cũng không ít lần, sồi phải khó khăn lắm mới vượt qua được vùng đất cứng nào đó thì lại không có nước. Sồi con không hề nản chí, 
+                nó biết rằng chỉ có sự kiên trì mới đem lại những thay đổi, nó ước mơ đưa được rễ đến những vùng xa nhất, sâu nhất mà chưa ai đến được.</p>
+            <p>Thời gian trôi qua, thiên nhiên thì vẫn tiếp tục ưu đãi khu rừng. Sồi con ngày nào giờ đã trưởng thành, nó vẫn giữ vững mục tiêu của mình. 
+                Các con của sồi thừa hưởng đức tính nhẫn nại kiên tâm từ cha nó, chúng không ngừng phát triển để vươn cao nhưng cũng không quên dành một 
+                phần nguồn nước cho bộ rễ của mình, giúp chúng vươn tới những vùng sâu trong lòng đất, giúp chúng có những trải nghiệm thật tuyệt vời mà 
+                chưa một bạn bè đồng trang lứa nào biết được. Và xa hơn nữa là để chuẩn bị cho những thách thức, cơ hội sau này…</p>
+            <p>Cuối cùng thì cái ngày ấy đã đến, một chấn động ngầm trong lòng đất khiến cho nhiều mạch nước ngầm bị chặn lại. 
+                Khu rừng bao ngàn năm nay dưới sự chăm sóc ân cần của người mẹ thiên nhiên, nay phải tự sống với những thử thách của đời. </p>
+            <p>Nguồn nước cạn kiệt, nhiều loài cây đã lần lượt ngã xuống, chúng phải cho con cháu ra đi theo những bầy chim di cư tìm vùng đất hứa. 
+                Đám cây xưa kia ngày nào còn nói chuyện rôm rả dưới tán lá rộng, giờ còn lại lèo tèo dưới ánh mặt trời thiêu đốt. 
+                Một giọng nói rất quen đang thều thào:</p>
+            <p>“Trời ơi, hãy nhìn xem kìa, mặt đất đã rạn nứt ra hết rồi! Chúng ta sẽ chết mất, chúng ta sẽ chết mất!” 
+                – Cái cây béo ú dạo nọ kêu lên yếu ớt và từ từ đổ xuống, bộ rễ yếu ớt không thể giữ được cái thân to khỏe.</p>
+            <p>Cách đó không xa, gia đình nhà sồi vẫn đứng vững, giờ chính là lúc họ cần phải quyết tâm hơn bao giờ hết để chinh phục những độ sâu mới,
+                 tìm nguồn nước mới. Có lẽ thiên nhiên cũng khó có thể đánh gục được một loài cây với niềm tin sống mãnh liệt đến vậy!</p>
+            <p>Và quả thực, cho đến tận ngày nay loài sồi ấy đã được cả thế giới biết đến. Tên tuổi cây sồi Ténéré, 
+                được mệnh danh là cây sồi lớn nhất thế giới, hay một số báo chí còn ca ngợi đây là “vật thể tự nhiên duy nhất” 
+                được đánh dấu trên bản đồ Sahara (giờ đây đã là một cái “chảo rang” của hành tinh).</p>
+            <p>Quả thực, nó làm kinh ngạc các nhà khoa học khi một mình đứng vững sa mạc, xung quanh bán kính 400km không một bóng cây nào bầu bạn.
+                 Hơn nữa, người ta đã đào thử một cái giếng gần đó và ngỡ ngàng khi phát hiện rễ cây đã đâm xuống đất tận 36m để tìm nước. 
+                 Thật đáng khâm phục!</p>
+        </div>
+        <div class="img1">
+            <img style="width: 400px; height: 400px;" src="http://1.bp.blogspot.com/-is9gHuta-V4/Vdym_j3nixI/AAAAAAAAGlc/kTbRySwEnRk/s640/46315527.jpg">
+        </div>
+        <!-- <div class="img2">
+            <img style="width: 150px; height: 150px;" src="http://4.bp.blogspot.com/-_x-9pdgnzi0/UkwE2fTapUI/AAAAAAAAADs/lqpSclygGTM/s1600/Sakura-Japanese-Tea-Ceremony.jpg">
+        </div>
+        <div class="img3">
+            <img style="width: 150px; height: 150px;" src="http://4.bp.blogspot.com/-Jmd08s5fc3U/VYJw2zQFmtI/AAAAAAAABmY/-ZgEJYtqGhk/s1600/hinh-anh-hoa-sen-dep-nhat-viet-nam-khien-nguoi-xem-khong_012.jpg">
+        </div> -->
+        <div class="footer">
+            <p>Footer is here</p>
+        </div>
+    </div>
+</body>
+</html>
