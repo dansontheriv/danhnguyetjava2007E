@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    var numbers = [];
+    numbers[0] = [35, 78, 33, 1];
+    numbers[1] = [9, 104, 22, 74];
+    numbers[2] = [155, 75, 23, 44];
+    numbers[3] = [42, 44, 8, 100];
+
+    var max = numbers[0][0];
+    var min = numbers[0][0];
+
+    for(var i = 0; i<numbers.length; i++){
+        for(var j =0; j<numbers.length; j++){
+            if(max<numbers[i][j]){
+                max = numbers[i][j];                
+            }
+            if(min>numbers[i][j]){
+                min = numbers[i][j];
+            }
+        }
+    }
+    document.write("So lon nhat trong mang la: ", max + "</br>");
+    document.write("So nho nhat trong mang la: ", min);
+
+
+</script>
+
+</html>
