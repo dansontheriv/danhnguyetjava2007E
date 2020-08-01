@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const toanTu = ["+", "-", "*", "/"];
+    
+    function main(){
+        var input = prompt("Nhap vao bieu thuc: ");
+        var chuoiSauTach = tachBieuThuc(input);
+        console.log(chuoiSauTach);
+        if(chuoiSauTach == 2){
+            var toanTu = chuoiSauTach[1];
+            switch(toanTu){
+                case "+":
+                    document.write(cong2so(chuoiSauTach[2], chuoiSauTach[3]));
+                    break;
+                case "-":
+                    document.write(cong2so(chuoiSauTach[2], chuoiSauTach[3]));
+                    break;
+                case "*":
+                    document.write(cong2so(chuoiSauTach[2], chuoiSauTach[3]));
+                    break;
+                case "/":
+                    document.write(cong2so(chuoiSauTach[2], chuoiSauTach[3]));
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            document.write("Sai bieu thuc nhap vao!");
+        }
+    }
+
+    function tachBieuThuc(bieuThuc){
+        var resultArray = [];
+        toanTu.forEach(function(value, index){
+            var inputArray = bieuThuc.split(value);
+            if(ktra2so(inputArray[0]) && ktra2so(inputArray[1])){
+                resultArray.push(true);
+                resultArray.push(value);
+                resultArray.push(inputArray[0]);
+                resultArray.push(inputArray[1]);
+                return;
+            }
+        });
+        return resultArray;
+    }
+    
+    function ktra2so(input){
+        var numRegex = /^\d+$/;
+        return numRegex.test(input);
+    }
+
+    function cong2so(so1, so2){
+        return +so1 + +so2;
+    }
+
+    function tru2so(so1, so2){
+        return +so1 - +so2;
+    }
+
+    function nhan2so(so1, so2){
+        return +so1 * +so2;
+    }
+
+    function chia2so(so1, so2){
+        return +so1 / +so2;
+    }
+
+    main();
+</script>
+
+</html>

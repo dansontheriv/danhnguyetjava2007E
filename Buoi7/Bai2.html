@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+    var input = prompt("Nhap chuoi: ");
+    var newArray = input.split("");
+    var n = newArray.length;
+
+    for (var i=0; i < n/2; i++){
+        var temp = newArray[i];
+        newArray[i] = newArray[n-1-i];
+        newArray[n-1-i] = temp;
+    }
+    var stringReverse = newArray.join("");
+    document.write(stringReverse);
+
+</script>
+
+</html>
