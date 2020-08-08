@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding-left: 400px;
+    }
+
+    #form{
+        height: 300px;
+        width: 500px;
+        background-color: lightpink;
+        text-align: center;
+        margin-top: 100px;
+        
+   }
+
+   input[type=text], input[type=password] {
+        margin-top: 50px;
+        width: 300px;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+   }
+
+   #usname{
+       margin-top: 50px;
+   }
+
+
+</style>
+
+<body>
+    <div id="container">
+        <div id="form">
+            <div id="usname">
+                <input id="name" type="text" placeholder="Username" name="Username">
+            </div>
+            <div id="uspass">
+                <input id="pass" type="password" placeholder="Password" name="Password">
+            </div>
+            <div class="register login">
+                <button type="button" onclick="checkLogin()">
+					LOGIN
+				</button>
+            </div>
+        </div>  
+        
+    </div>
+
+</body>
+
+<script>
+
+    function checkLogin(){
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+        
+        if(name == "chinh123" && pass == "123456"){
+            document.write("Dang nhap thanh cong");
+        }else{
+            alert("Sai mat khau hoac ten dang nhap");
+        }
+        return false;
+    }
+
+</script>
+</html>

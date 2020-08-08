@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #vnclock{
+        font-size: xx-large;
+        text-align: center;
+        padding:10px;
+    }
+
+</style>
+
+<body>
+    <span id="vnclock"></span>
+</body>
+
+<script>
+    window.setInterval("showTime()", 1000);
+    function getVNTime(){
+        var time = new Date();
+        var hr = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+
+        hr = ((hr < 10) ? "0" : "") + hr;
+        min = ((min < 10) ? "0" : "") + min;
+        sec = ((sec < 10) ? "0" : "") + sec;
+
+        return hr + ":" + min + ":" + sec;
+    }
+    function showTime(){
+        var vnclock = document.getElementById("vnclock");
+        if (vnclock != null)
+            vnclock.innerHTML = getVNTime();
+        setInterval("showTime()", 1000);
+    }
+</script>
+
+</html>

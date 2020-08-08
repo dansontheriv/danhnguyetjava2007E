@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calculator">
+        <table>
+          <tr>
+            <td colspan="4">
+              <input type="text" name="display" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td id="mot"><input type="button" name="one" value="1"></td>
+            <td id="hai"><input type="button" name="two" value="2"></td>
+            <td id="ba"><input type="button" name="three" value="3"></td>
+            <td id="cong"><input type="button" class="operator" name="plus" value="+"></td>
+          </tr>
+          <tr>
+            <td id="bon"><input type="button" name="four" value="4"></td>
+            <td id="nam"><input type="button" name="five" value="5"></td>
+            <td id="sau"><input type="button" name="six" value="6"></td>
+            <td id="tru"><input type="button" class="operator" name="minus" value="-"></td>
+          </tr>
+          <tr>
+            <td id="bay"><input type="button" name="seven" value="7"></td>
+            <td id="tam"><input type="button" name="eight" value="8"></td>
+            <td id="chin"><input type="button" name="nine" value="9"></td>
+            <td id="nhan"><input type="button" class="operator" name="times" value="x"></td>
+          </tr>
+          <tr>
+            <td id="xoa"><input type="button" class="operator" id="clear" name="clear" value="C"></td>
+            <td id="khong"><input type="button" class="operator" name="zero" value="0"></td>
+            <td id="bang"><input type="button" class="operator" name="doit" value="="></td>
+            <td id="chia"><input type="button" class="operator" name="div" value="/"></td>
+          </tr>
+        </table>
+      </form>
+</body>
+
+<script>
+  var one = document.getElementById("mot");
+  one.onclick = function soMot(){
+    document.body.click = calculator.display.value +=1;
+  };
+
+  var two = document.getElementById("hai");
+  two.onclick = function soHai(){
+    document.body.click = calculator.display.value +=2;
+  };
+  
+  var three = document.getElementById("ba");
+  three.onclick = function soBa(){
+    document.body.click = calculator.display.value +=3;
+  };
+
+  var four = document.getElementById("bon");
+  four.onclick = function soBon(){
+    document.body.click = calculator.display.value +=4;
+  };
+
+  var five = document.getElementById("nam");
+  five.onclick = function soNam(){
+    document.body.click = calculator.display.value +=5;
+  };
+
+  var six = document.getElementById("sau");
+  six.onclick = function soSau(){
+    document.body.click = calculator.display.value +=6;
+  };
+
+  var seven = document.getElementById("bay");
+  seven.onclick = function soBay(){
+    document.body.click = calculator.display.value +=7;
+  };
+
+  var eight = document.getElementById("tam");
+  eight.onclick = function soTam(){
+    document.body.click = calculator.display.value +=8;
+  };
+
+  var nine = document.getElementById("chin");
+  nine.onclick = function soChin(){
+    document.body.click = calculator.display.value +=9;
+  };
+
+  var zero = document.getElementById("khong");
+  zero.onclick = function soKhong(){
+    document.body.click = calculator.display.value +='0';
+  };
+
+  var plus = document.getElementById("cong");
+  plus.onclick = function dauCong(){
+    document.body.click = calculator.display.value +='+';
+  };
+
+  var minus = document.getElementById("tru");
+  minus.onclick = function dauTru(){
+    document.body.click = calculator.display.value +='-';
+  };
+
+  var times = document.getElementById("nhan");
+  times.onclick = function dauNhan(){
+    document.body.click = calculator.display.value +='x';
+  };
+
+  var div = document.getElementById("chia");
+  div.onclick = function dauChia(){
+    document.body.click = calculator.display.value +='/';
+  };
+
+  var clear = document.getElementById("xoa");
+  clear.onclick = function xoa(){
+    document.body.click = calculator.display.value +='';
+  };
+
+  var doit = document.getElementById("bang");
+  doit.onclick = function dauBang(){
+    document.body.click = calculator.display.value = eval(calculator.display.value);
+  };
+
+</script>
+</html>
