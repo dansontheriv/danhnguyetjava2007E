@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<style>
+    .container {
+        width: 1366px;
+        height: 768px;
+        position: relative;
+    }
+
+    img {
+        width: 1366px;
+        height: 768px;
+    }
+
+    .slideshow {
+        width: 1366px;
+        height: 768px;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .slide.active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .slidebtn span{
+        color: white;
+        font-size: 60px;
+        opacity: 0.6;
+        
+    }
+
+    span#btn-prev{
+        position: absolute;
+        top: 45%;
+        left: 0%;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    span#btn-next{
+        position: absolute;
+        top: 45%;
+        right: 0%;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .slidebtn ul {
+        position: absolute;
+        z-index: 10;
+        width: 100px;
+        bottom: 5%;
+        left: 50%;
+        margin-left: -50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slidebtn ul li {
+        width: 20px;
+        height: 20px;
+        background: white;
+        opacity: 0.6;
+        list-style: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+
+    .disappear-to-the-left{
+        animation: disappear-to-the-left 1s forwards;
+    }
+    @keyframes disappear-to-the-left{
+        from{
+            transform: translateX(0%);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    
+    .appear-from-the-right{
+        animation: appear-from-the-right 1s forwards;
+    }
+    @keyframes appear-from-the-right{
+        from{
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(0%);
+        }
+    }
+
+
+    .disappear-to-the-right{
+        animation: disappear-to-the-right 1s forwards;
+    }
+    @keyframes disappear-to-the-right{
+        from{
+            transform: translateX(0%);
+        }
+        to{
+            transform: translateX(100%);
+        }
+    }
+
+    .appear-from-the-left{
+        animation: appear-from-the-left 1s forwards;
+    }
+    @keyframes appear-from-the-left{
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0%);
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="slideshow">
+           <div class="slide active"><img src="https://cdna.artstation.com/p/assets/images/images/014/549/308/large/alena-aenami-004.jpg?1544454362"></div>
+           <div class="slide"><img src="https://cdna.artstation.com/p/assets/images/images/014/905/850/large/alena-aenami-witcher-1k.jpg?1546204748" ></div>
+           <div class="slide"><img src="https://cdnb.artstation.com/p/assets/images/images/014/327/751/large/alena-aenami-endless-1k.jpg?1543505168"></div>
+        </div>
+        <div class="slidebtn">
+           <span id="btn-prev"><i class="fas fa-chevron-left"></i></span>
+           <span id="btn-next"><i class="fas fa-chevron-right"></i></span>
+           <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ul>
+        </div>
+     </div>
+</body>
+
+
+<script>
+$(document).ready(function() {
+	$('#btn-next').click(function(event) {
+
+		var slide_sau = $('.active').next();
+		console.log(slide_sau.length);
+		if(slide_sau.length!=0){
+			$('.active').addClass('disappear-to-the-left').one('webkitAnimationEnd', function(event) {
+				$('.disappear-to-the-left').removeClass('disappear-to-the-left').removeClass('active');
+			});
+			slide_sau.addClass('active').addClass('appear-from-the-right').one('webkitAnimationEnd', function(event) {
+				$('.appear-from-the-right').removeClass('appear-from-the-right');
+			});
+		}else{
+			$('.active').addClass('disappear-to-the-left').one('webkitAnimationEnd', function(event) {
+				$('.disappear-to-the-left').removeClass('disappear-to-the-left').removeClass('active');
+			});
+			$('.slide:first-child').addClass('active').addClass('appear-from-the-right').one('webkitAnimationEnd', function(event) {
+				$('.appear-from-the-right').removeClass('appear-from-the-right');
+			});
+		}
+	});
+	$('#btn-prev').click(function(event) {
+
+		var slide_truoc = $('.active').prev();
+		if(slide_truoc.length!=0){
+			$('.active').addClass('disappear-to-the-right').one('webkitAnimationEnd', function(event) {
+				$('.disappear-to-the-right').removeClass('disappear-to-the-right').removeClass('active');
+			});
+			slide_truoc.addClass('active').addClass('appear-from-the-left').one('webkitAnimationEnd', function(event) {
+				$('.appear-from-the-left').removeClass('appear-from-the-left');
+			});
+		}else{
+			$('.active').addClass('disappear-to-the-right').one('webkitAnimationEnd', function(event) {
+				$('.disappear-to-the-right').removeClass('disappear-to-the-right').removeClass('active');
+			});
+			$('.slide:last-child').addClass('active').addClass('appear-from-the-left').one('webkitAnimationEnd', function(event) {
+				$('.appear-from-the-left').removeClass('appear-from-the-left');
+			});
+		}
+    });
+    
+    setInterval(function(){
+        $('#btn-next').click();
+    }, 5000);
+
+});
+</script>
+</html>
